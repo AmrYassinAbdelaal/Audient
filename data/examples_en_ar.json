@@ -1,0 +1,43 @@
+{
+  "examples": [
+    {
+      "prompt_en": "Find female customers",
+      "prompt_ar": "اعثر على العملاء الإناث",
+      "filters": [
+        {"field": "gender", "operator": "=", "value": "Female"}
+      ]
+    },
+    {
+      "prompt_en": "Customers with more than 10 orders",
+      "prompt_ar": "العملاء الذين لديهم أكثر من 10 طلبات",
+      "filters": [
+        {"field": "total_orders", "operator": ">", "value": 10}
+      ]
+    },
+    {
+      "prompt_en": "Stores rated between 3 and 5 stars",
+      "prompt_ar": "المتاجر التي تقييمها بين 3 و 5 نجوم",
+      "filters": [
+        {"field": "store_rating", "operator": "between", "value": [3, 5]}
+      ]
+    },
+    {
+      "prompt_en": "Find customers who joined after Jan 2023 with more than 5 orders and store rating between 3 and 5",
+      "prompt_ar": "اعثر على العملاء الذين انضموا بعد يناير 2023 ولديهم أكثر من 5 طلبات وتقييم المتجر بين 3 و5",
+      "filters": [
+        {"field": "joining_date", "operator": ">", "value": "2023-01-01"},
+        {"field": "total_orders", "operator": ">", "value": 5},
+        {"field": "store_rating", "operator": "between", "value": [3, 5]}
+      ]
+    },
+    {
+      "prompt_en": "Customers in Riyadh with more than 500 sales",
+      "prompt_ar": "العملاء في الرياض الذين لديهم أكثر من 500 مبيعات",
+      "filters": [
+        {"field": "city", "operator": "=", "value": "Riyadh"},
+        {"field": "total_sales", "operator": ">", "value": 500}
+      ]
+    }
+  ]
+}
+

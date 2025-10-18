@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  audient:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: audient
+    ports:
+      - "8000:8000"
+    environment:
+      # OpenAI Configuration
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      
+      # LangSmith Configuration
+      - LANGCHAIN_TRACING_V2=${LANGCHAIN_TRACING_V2:-true}
+      - LANGCHAIN_ENDPOINT=${LANGCHAIN_ENDPOINT:-https://api.smith.langchain.com}
+      - LANGCHAIN_API_KEY=${LANGCHAIN_API_KEY}
+      - LANGCHAIN_PROJECT=${LANGCHAIN_PROJECT:-audient}
+      
+      # Application Settings
+      - APP_NAME=Audient
+      - APP_VERSION=1.0.0
+      - DEBUG=${DEBUG:-false}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      
+      # API Settings
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+      - API_RELOAD=false
+      
+      # Model Configuration
+      - LLM_MODEL=${LLM_MODEL:-gpt-4-turbo-preview}
+      - LLM_TEMPERATURE=${LLM_TEMPERATURE:-0.0}
+      - LLM_MAX_TOKENS=${LLM_MAX_TOKENS:-2000}
+    
+    volumes:
+      # Mount data directory for easy updates
+      - ../data:/app/data:ro
+    
+    restart: unless-stopped
+    
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    
+    networks:
+      - audient-network
+
+networks:
+  audient-network:
+    driver: bridge
