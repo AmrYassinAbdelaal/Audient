@@ -1,0 +1,78 @@
+{
+  "gender_mappings": {
+    "male": "Male",
+    "female": "Female",
+    "m": "Male",
+    "f": "Female",
+    "ذكر": "Male",
+    "انثى": "Female",
+    "أنثى": "Female"
+  },
+  "country_mappings": {
+    "sa": "Saudi Arabia",
+    "السعودية": "Saudi Arabia",
+    "المملكة العربية السعودية": "Saudi Arabia",
+    "ae": "UAE",
+    "الامارات": "UAE",
+    "الإمارات": "UAE",
+    "kw": "Kuwait",
+    "الكويت": "Kuwait",
+    "eg": "Egypt",
+    "مصر": "Egypt"
+  },
+  "city_mappings": {
+    "الرياض": "Riyadh",
+    "جدة": "Jeddah",
+    "مكة": "Makkah",
+    "المدينة": "Madinah",
+    "الدمام": "Dammam",
+    "دبي": "Dubai",
+    "أبوظبي": "Abu Dhabi"
+  },
+  "boolean_mappings": {
+    "true": true,
+    "false": false,
+    "yes": true,
+    "no": false,
+    "نعم": true,
+    "لا": false
+  },
+  "month_names": {
+    "january": "01",
+    "february": "02",
+    "march": "03",
+    "april": "04",
+    "may": "05",
+    "june": "06",
+    "july": "07",
+    "august": "08",
+    "september": "09",
+    "october": "10",
+    "november": "11",
+    "december": "12",
+    "jan": "01",
+    "feb": "02",
+    "mar": "03",
+    "apr": "04",
+    "jun": "06",
+    "jul": "07",
+    "aug": "08",
+    "sep": "09",
+    "oct": "10",
+    "nov": "11",
+    "dec": "12",
+    "يناير": "01",
+    "فبراير": "02",
+    "مارس": "03",
+    "أبريل": "04",
+    "مايو": "05",
+    "يونيو": "06",
+    "يوليو": "07",
+    "أغسطس": "08",
+    "سبتمبر": "09",
+    "أكتوبر": "10",
+    "نوفمبر": "11",
+    "ديسمبر": "12"
+  }
+}
+

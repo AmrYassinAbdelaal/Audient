@@ -1,0 +1,212 @@
+{
+  "test_cases": [
+    {
+      "id": 1,
+      "prompt_en": "Find female customers",
+      "prompt_ar": "اعثر على العملاء الإناث",
+      "expected_output": {
+        "filters": [
+          {"field": "gender", "operator": "=", "value": "Female"}
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt_en": "Customers with more than 10 orders",
+      "prompt_ar": "العملاء الذين لديهم أكثر من 10 طلبات",
+      "expected_output": {
+        "filters": [
+          {"field": "total_orders", "operator": ">", "value": 10}
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt_en": "Stores rated between 3 and 5 stars",
+      "prompt_ar": "المتاجر التي تقييمها بين 3 و 5 نجوم",
+      "expected_output": {
+        "filters": [
+          {"field": "store_rating", "operator": "between", "value": [3, 5]}
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt_en": "Find customers who joined after Jan 2023 with more than 5 orders and store rating between 3 and 5",
+      "prompt_ar": "اعثر على العملاء الذين انضموا بعد يناير 2023 ولديهم أكثر من 5 طلبات وتقييم المتجر بين 3 و5",
+      "expected_output": {
+        "filters": [
+          {"field": "joining_date", "operator": ">", "value": "2023-01-01"},
+          {"field": "total_orders", "operator": ">", "value": 5},
+          {"field": "store_rating", "operator": "between", "value": [3, 5]}
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt_en": "Customers in Riyadh with more than 500 sales",
+      "prompt_ar": "العملاء في الرياض الذين لديهم أكثر من 500 مبيعات",
+      "expected_output": {
+        "filters": [
+          {"field": "city", "operator": "=", "value": "Riyadh"},
+          {"field": "total_sales", "operator": ">", "value": 500}
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt_en": "Male customers",
+      "prompt_ar": "العملاء الذكور",
+      "expected_output": {
+        "filters": [
+          {"field": "gender", "operator": "=", "value": "Male"}
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt_en": "Customers with total sales greater than or equal to 1000",
+      "prompt_ar": "العملاء الذين لديهم مبيعات إجمالية أكبر من أو تساوي 1000",
+      "expected_output": {
+        "filters": [
+          {"field": "total_sales", "operator": ">=", "value": 1000}
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt_en": "Customers with less than 3 orders",
+      "prompt_ar": "العملاء الذين لديهم أقل من 3 طلبات",
+      "expected_output": {
+        "filters": [
+          {"field": "total_orders", "operator": "<", "value": 3}
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt_en": "Customers from Saudi Arabia",
+      "prompt_ar": "العملاء من السعودية",
+      "expected_output": {
+        "filters": [
+          {"field": "country", "operator": "=", "value": "Saudi Arabia"}
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt_en": "Find customers in Jeddah or Riyadh",
+      "prompt_ar": "اعثر على العملاء في جدة أو الرياض",
+      "expected_output": {
+        "filters": [
+          {"field": "city", "operator": "=", "value": ["Jeddah", "Riyadh"]}
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt_en": "Customers who joined before 2022-06-01",
+      "prompt_ar": "العملاء الذين انضموا قبل 2022-06-01",
+      "expected_output": {
+        "filters": [
+          {"field": "joining_date", "operator": "<", "value": "2022-06-01"}
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt_en": "Customers with store rating of exactly 5",
+      "prompt_ar": "العملاء الذين لديهم تقييم 5 بالضبط",
+      "expected_output": {
+        "filters": [
+          {"field": "store_rating", "operator": "=", "value": 5}
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt_en": "Customers with sales less than or equal to 100",
+      "prompt_ar": "العملاء الذين لديهم مبيعات أقل من أو تساوي 100",
+      "expected_output": {
+        "filters": [
+          {"field": "total_sales", "operator": "<=", "value": 100}
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt_en": "Female customers in Dubai with more than 20 orders",
+      "prompt_ar": "العملاء الإناث في دبي الذين لديهم أكثر من 20 طلب",
+      "expected_output": {
+        "filters": [
+          {"field": "gender", "operator": "=", "value": "Female"},
+          {"field": "city", "operator": "=", "value": "Dubai"},
+          {"field": "total_orders", "operator": ">", "value": 20}
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt_en": "Customers who don't have email",
+      "prompt_ar": "العملاء الذين ليس لديهم بريد إلكتروني",
+      "expected_output": {
+        "filters": [
+          {"field": "doesnt_have_email", "operator": "=", "value": true}
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "prompt_en": "Customers with no orders",
+      "prompt_ar": "العملاء الذين ليس لديهم طلبات",
+      "expected_output": {
+        "filters": [
+          {"field": "doesnt_have_orders", "operator": "=", "value": true}
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "prompt_en": "Customers who have cancelled orders",
+      "prompt_ar": "العملاء الذين لديهم طلبات ملغاة",
+      "expected_output": {
+        "filters": [
+          {"field": "have_cancelled_orders", "operator": "=", "value": true}
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "prompt_en": "Customers with rating not equal to 1",
+      "prompt_ar": "العملاء الذين تقييمهم لا يساوي 1",
+      "expected_output": {
+        "filters": [
+          {"field": "store_rating", "operator": "!=", "value": 1}
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "prompt_en": "Male customers in Riyadh with sales between 1000 and 5000",
+      "prompt_ar": "العملاء الذكور في الرياض الذين لديهم مبيعات بين 1000 و 5000",
+      "expected_output": {
+        "filters": [
+          {"field": "gender", "operator": "=", "value": "Male"},
+          {"field": "city", "operator": "=", "value": "Riyadh"},
+          {"field": "total_sales", "operator": "between", "value": [1000, 5000]}
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "prompt_en": "Customers from UAE",
+      "prompt_ar": "العملاء من الإمارات",
+      "expected_output": {
+        "filters": [
+          {"field": "country", "operator": "=", "value": "UAE"}
+        ]
+      }
+    }
+  ]
+}
+

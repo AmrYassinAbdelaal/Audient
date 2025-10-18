@@ -1,0 +1,61 @@
+{
+  "fields": {
+    "customer_attributes": [
+      "gender",
+      "birthday",
+      "birthday_days",
+      "joining_date",
+      "last_login"
+    ],
+    "behavioral_attributes": [
+      "doesnt_have_orders",
+      "have_cancelled_orders",
+      "latest_purchase"
+    ],
+    "sales_engagement": [
+      "total_sales",
+      "total_orders",
+      "store_rating"
+    ],
+    "contact_attributes": [
+      "doesnt_have_email"
+    ],
+    "geographic_attributes": [
+      "country",
+      "city"
+    ]
+  },
+  "operators": [
+    "=",
+    "!=",
+    "<",
+    ">",
+    "<=",
+    ">=",
+    "between"
+  ],
+  "field_types": {
+    "gender": "string",
+    "birthday": "date",
+    "birthday_days": "integer",
+    "joining_date": "date",
+    "last_login": "date",
+    "doesnt_have_orders": "boolean",
+    "have_cancelled_orders": "boolean",
+    "latest_purchase": "date",
+    "total_sales": "float",
+    "total_orders": "integer",
+    "store_rating": "float",
+    "doesnt_have_email": "boolean",
+    "country": "string",
+    "city": "string"
+  },
+  "valid_operators_per_type": {
+    "string": ["=", "!="],
+    "date": ["=", "!=", "<", ">", "<=", ">=", "between"],
+    "integer": ["=", "!=", "<", ">", "<=", ">=", "between"],
+    "float": ["=", "!=", "<", ">", "<=", ">=", "between"],
+    "boolean": ["="]
+  }
+}
+
